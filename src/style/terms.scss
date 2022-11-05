@@ -1,0 +1,93 @@
+.terms {
+	margin-top: 30px;
+	&__swiper {
+		&> .swiper-wrapper > .swiper-slide {
+			height: auto;
+		}
+	}
+	&__card {
+		padding: 29px 38px;
+		background: #FFFFFF;
+		border: 0.930288px solid rgba(136, 140, 140, 0.4);
+		border-radius: 27.9087px;
+		height: 100%;
+		max-width: 290px;
+		margin: 0 auto;
+		&:hover {
+			background: #00AEC7;
+			box-shadow: 0px 4px 7px rgba(0, 58, 64, 0.2);
+			& > .terms__title {
+			color: #FFFFFF;
+			}
+			& > .terms__img > path {
+				fill: #FFFFFF;
+			}
+			color: #FFFFFF;
+		}
+	}
+	&__img {
+		width: 65px;
+		height: 65px;
+	}
+	&__title {
+		margin-top: 11px;
+		font-size: 22px;
+		font-weight: 700;
+		color: #000000;
+	}
+	&__text {
+		margin-top: 10px;
+	}
+	&__swiper-pagination {
+		width: auto !important;
+	}
+	&__items {
+		display: none;
+	}
+	&__next {
+		display: none;
+	}
+	&__prev {
+		display: none;
+	}
+	&__controls {
+		margin-top: 21px;
+		display: flex;
+		justify-content: center;
+		gap: 48px;
+	}
+}
+
+@media only screen and (min-width: 991.98px) {
+	.terms {
+		&__prev {
+			display: block;
+			&.swiper-button-disabled > svg {
+				fill-opacity: 0.3;
+			}
+		}
+		&__next {
+			display: block;
+			&.swiper-button-disabled > svg {
+				fill-opacity: 0.3;
+			}
+		}	
+	}
+}
+@media only screen and (min-width: 1279px) {
+	.terms {
+		position: relative;
+		z-index: 2;
+		&__swiper {
+			display: none;
+		}
+		&__items {
+			display: flex;
+
+		}
+		&__card {
+			height: auto;
+			gap: 30px;
+		}
+	}
+}
