@@ -1,9 +1,10 @@
 import './index.html';
 import './index.scss';
-import Swiper, { Navigation, Pagination} from 'swiper';
+import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
+import 'swiper/scss/autoplay';
 
 const termsSwiper = new Swiper('.terms__swiper', {
 	slidesPerView: 1,
@@ -34,7 +35,7 @@ const photoSwiper = new Swiper('.photo__swiper', {
 	centeredSlides: true,
 	direction: 'horizontal',
 	loop: false,
-	modules: [Navigation, Pagination],
+	modules: [Navigation, Pagination, Autoplay],
 	pagination: {
 		el: '.photo__swiper-pagination',
 		clickable: true,
@@ -43,6 +44,9 @@ const photoSwiper = new Swiper('.photo__swiper', {
     nextEl: '.photo__next',
     prevEl: '.photo__prev',
   },
+	autoplay: {
+		delay: 5000,
+	},
 });
 
 const footerSwiper = new Swiper('.footer__swiper', {
