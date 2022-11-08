@@ -13,6 +13,13 @@
 		height: 100%;
 		max-width: 290px;
 		margin: 0 auto;
+		transition: all 0.3s ease 0s;
+		& > .terms__title {
+			transition: color 0.3s ease 0s;
+		}
+		& > .terms__img > path {
+			transition: fill 0.3s ease 0s;
+		}
 		&:hover {
 			background: #00AEC7;
 			box-shadow: 0px 4px 7px rgba(0, 58, 64, 0.2);

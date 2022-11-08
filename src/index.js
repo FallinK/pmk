@@ -1,6 +1,6 @@
 import './index.html';
 import './index.scss';
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination} from 'swiper';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
