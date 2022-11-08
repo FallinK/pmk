@@ -69,14 +69,12 @@
 	.terms {
 		&__prev {
 			display: block;
-			cursor: pointer;
 			&.swiper-button-disabled > svg {
 				fill-opacity: 0.3;
 			}
 		}
 		&__next {
 			display: block;
-			cursor: pointer;
 			&.swiper-button-disabled > svg {
 				fill-opacity: 0.3;
 			}
