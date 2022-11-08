@@ -65,6 +65,9 @@
 	height: 129px;
 	font-weight: 700;
 	&__text {
+		& > a {
+			color: #2C3E50;
+		}
 	}
 	&__button {
 		padding: 5px 32px;
