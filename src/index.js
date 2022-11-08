@@ -6,6 +6,14 @@ import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 import 'swiper/scss/autoplay';
 
+window.onload = function () {
+	document.body.classList.add('loaded_hiding');
+	window.setTimeout(function () {
+		document.body.classList.add('loaded');
+		document.body.classList.remove('loaded_hiding');
+	}, 500);
+}
+
 const termsSwiper = new Swiper('.terms__swiper', {
 	slidesPerView: 1,
 	preloadImages: true,
