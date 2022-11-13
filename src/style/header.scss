@@ -1,50 +1,62 @@
 .header {
+	margin-top: 35px;
+	&__body {
+		display: flex;
+		flex-direction: column;
+	}
 	&__picture {
-		margin: 33px 0 0 auto;
-		width: 267px;
-		height: 256px;
+		margin-top: 30px;
+		padding-top: 100%;
 		position: relative;
+		width: 100%;
+		height: 100%;
 		overflow: hidden;
 		& img {
 			position: relative;
-			top: -15%;
-			left: -15%;
+			top: -18%;
+			left: -12.4%;
 			width: 120%;
-			height: 120%;
+			height: 121%;
 			object-fit: cover;
 		}
 	}
 	&__mask {
 		mask-image: url('./assets/img/header/header__mask.svg');
 		mask-size: 100% 100%;
+		mask-repeat: no-repeat;
+		mask-position: 9px -2px;
 		position: absolute;
 		top: 0;
-		left: 8px;
+		right: 0;
 		z-index: 3;
 		width: 100%;
-		height: 100%;
+		height: 98%;
 	}
 	&__background {
 		position: absolute;
 		z-index: 2;
-		top: 1px;
-		left: 0;
+		top: 0;
+		right: 0;
 		width: 100%;
-		height: 100%;
+		height: 97%;
 		mask-image: url('./assets/img/header/header__background.svg');
 		mask-size: 100% 100%;
-		mask-clip: border-box;
+		mask-repeat: no-repeat;
+		mask-position: 2px -3px;
 		background-color: #00AEC7;
 	}
 	&__container {
+		display: flex;
+		flex-direction: column;
 	}
 	&__content {
-		padding-left: 12px;
+		flex: 100%;
 	}
 	&__logo {
 		width: 145.63px;
 		height: 45.7px;
-		margin-top: 35px;
+		position: relative;
+		left: -2px;
 	}
 	&__text {
 		margin-top: 27.3px;
@@ -53,7 +65,7 @@
 	}
 }
 .vacancies {
-	margin: 29px 0 14px 0;
+	margin: 16px 0 14px 0;
 	background: rgba(255, 255, 255, 0.9);
 	box-shadow: 0px 2.01613px 10.0806px rgba(0, 58, 64, 0.2);
 	border-radius: 30.2419px;
@@ -70,27 +82,20 @@
 		}
 	}
 	&__button {
-		padding: 5px 32px;
+		margin-bottom: 10px;
+		padding: 5px 34px;
 		background: #00AEC7;
 		border-radius: 15px;
 		color: #FFFFFF;
 		font-size: 16px;
-		transition: all 0.3s ease 0s;
-		&:hover {
-			background: #FFFFFF;
-			border: 1px dashed #00AEC7;
-			color: #00AEC7;
-		}
 	}
 }
 @media only screen and (min-width: 500.98px) {
 	.header {
 		&__picture {
-			width: 308px;
-			height: 296px;
 		}
 		&__mask {
-			left: 9px;
+			mask-position: 18px -2px;
 		}
 		&__logo {
 			width: 200px;
@@ -106,9 +111,10 @@
 }
 @media only screen and (min-width: 767.98px) {
 	.header {
-		&__container {
-			display: flex;
-			flex-wrap: wrap;
+		margin-top: 0;
+		&__body {
+			z-index: 1;
+			flex-direction: row;
 			justify-content: space-between;
 			position: relative;
 		}
@@ -119,38 +125,29 @@
 		}
 		&__picture {
 			flex: 58%;
-			width: 417px;
-			height: 406px;
 			top: 0;
 			margin-top: 0;
+			padding-top: 56%;
 		}
 		&__content {
 			flex: 42%;
 			align-self: center;
 		}
 		&__vacancies {
-			flex: 100%;
-			z-index: 10;
+			position: relative;
+			z-index: 2;
 			width: 100%;
 			height: 80px;
 			padding: 0 90px;
 			justify-content: space-between;
-		}
-		&__next {
-			display: none;
-		}
-		&__prev {
-			display: none;
-		}
-		&__controls {
-			margin-top: 21px;
-			display: flex;
-			justify-content: center;
-			gap: 48px;
+			user-select: none;
 		}
 	}
 	.vacancies {
 		flex-direction: row;
+		&__button {
+			margin-bottom: 5px;
+		}
 	}
 }
 @media only screen and (min-width: 991.98px) {
@@ -158,41 +155,60 @@
 		&__logo {
 			width: 225px;
 			height: 70px;
-			margin: 0 auto;
 			display: block;
 		}
 		&__text {
 			margin-top: 62px;
 		}
 		&__picture {
-			height: 525px;
+			padding-top: 58%;
 		}
 		&__vacancies {
-			margin: -10% auto 0 auto;
 			max-width: 1018px;
+			padding-right: 137px;
+		}
+		.vacancies {
+			&__button {
+				padding: 7px 44px;
+				border-radius: 20px;
+				transition: color, background-color 0.8s ease 0s;
+				&:hover {
+					padding: 6px 43px;
+					background: #FFFFFF;
+					border: 1px dashed #00AEC7;
+					color: #00AEC7;
+				}
+			}
 		}
 	}
 }
-@media only screen and (min-width: 1279px) {
+@media only screen and (min-width: 1299px) {
 	.header {
-		margin-bottom: -5%;
+		margin-bottom: -93px;
+		&__contaier {
+			position: relative;
+		}
 		&__logo {
 			width: 325px;
 			height: 102px;
 		}
 		&__text {
-			width: 365px;
-			margin: 62px auto 0 auto;
+		}
+		&__position {
+			max-width: 365px;
+			margin: 0 auto;
 		}
 		&__content {
 			align-self: flex-start;
 			margin-top: 94px;
 		}
 		&__picture {
-			width: 725px;
-			height: 696px;
 		}
 		&__vacancies {
+			position: absolute;
+			bottom: 22%;
+			left: 50%;
+			transform: translateX(-50%);
 			margin-top: -17%;
 		}
 	}

@@ -1,0 +1,18 @@
+.swashIn {
+	animation: swashIn 1s linear 0s 1 alternate forwards;
+}
+
+@keyframes swashIn {
+	0% {
+		opacity: 0;
+		transform: scale(0) translate(-100%);
+	}
+	70% {
+		transform: scale(0.9) translate(-10%);
+		opacity: 0.9;
+	}
+	100% {
+		transform: scale(1) translate(0);
+		opacity: 1;
+	}
+}
