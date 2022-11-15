@@ -1,7 +1,4 @@
 import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
-import 'swiper/scss';
-import 'swiper/scss/navigation';
-import 'swiper/scss/autoplay';
 
 
 const termsSwiper = new Swiper('.terms__swiper', {
