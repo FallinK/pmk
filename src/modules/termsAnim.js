@@ -1,11 +1,9 @@
-function onEntry(entries) {
-  entries.forEach(entry => {
-    if(entry.isIntersecting) {
-      document.querySelector('.terms > [class*="__container"]').classList.add('swashIn');
-    }
-  });
-}
-let options = { threshold: [0.5] };
-let observer = new IntersectionObserver(onEntry, options);
-let terms = document.querySelector('.terms');
-observer.observe(terms);
+import ActivateAnim from "./activateAnim";
+
+const options = { threshold: [0.5] };
+const observerTarget = '.terms';
+const terms = document.querySelector(observerTarget);
+const animClass = 'swashIn';
+
+const termsAnim = new ActivateAnim(options, observerTarget, terms, animClass);
+termsAnim.createObserver();
